@@ -16,7 +16,7 @@
     <div padding>
         <button ion-button block (click)="getRepos()">Search</button>
     </div>
-    <ion-card *ngFor="let repo of foundRepos">
+    <ion-card *ngFor="let repo of foundRepos" (click)="goToRepoDetails(repo)">
         <ion-card-header>
             {{ repo.name }}
         </ion-card-header>
@@ -24,4 +24,4 @@
             {{ repo.description }}
         </ion-card-content>
     </ion-card>
-</ion-content>  
+</ion-content>

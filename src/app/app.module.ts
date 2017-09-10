@@ -6,13 +6,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
+
 import { HomePage } from '../pages/home/home';
+import { RepositoryDetailsPage } from '../pages/repository-details/repository-details';
+
 import { GitHubProvider } from '../providers/git-hub/git-hub';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    RepositoryDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +26,8 @@ import { GitHubProvider } from '../providers/git-hub/git-hub';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    RepositoryDetailsPage
   ],
   providers: [
     StatusBar,

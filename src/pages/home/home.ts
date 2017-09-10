@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GitHubProvider } from '../../providers/git-hub/git-hub';
+import { RepositoryDetailsPage } from '../repository-details/repository-details';
 
 /**
  * Generated class for the HomePage page.
@@ -31,5 +32,9 @@ export class HomePage {
           () => console.log('getRepos completed')
       );
   }
+
+  goToRepoDetails(repo) {
+    this.navCtrl.push(RepositoryDetailsPage, { repo: repo });
+}
 
 }
